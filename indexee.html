@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/home2.css">
+    
+    <style>
+.container {
+    text-align: center;
+    margin-top: 100px;
+}
+.custom-style
+{
+    color: rgb(240, 234, 247);
+    font-size: 18px;
+    font-weight: 100;
+    margin-left: 20%;
+    margin-top: 25px;
+}
+.twotwo
+{
+    font-size: 24px;
+    margin-left: 15px;
+    font-weight: bolder;
+}
+.ersamo
+{
+    display: flex;
+}
+.dentamo
+{
+    margin-left: 70%;
+    font-size: 26px;
+
+}
+.conttt
+{
+    border-radius: 3px;
+    width: 600px;
+    height: 800px;
+    background-color: rgb(141, 174, 202);
+}
+
+.line{
+    border: none;
+  border-top: 1px solid rgb(197, 91, 91);
+  margin: 0px;
+  width: 70%;
+margin-left: -400;
+}
+.other
+{
+    border-color: aqua;
+    
+    margin: 20px;
+    padding: 20px;
+}
+#entryContainer
+{
+    background-color: rgb(6, 82, 82);
+}
+.displayImage
+{
+    height: 250px;
+    width: 250px;
+    margin-left: 20%;
+    border-radius: 5px;
+}
+.displayName
+{
+    margin-bottom: 20px;
+    margin-left: 40%;
+    color: rgb(236, 160, 17);
+}
+.displayDescription
+{
+    font-size: 22px;
+    margin-bottom: 0px;
+    margin-left: 20%;
+    color: rgb(236, 187, 97);
+}
+.ersamoo
+{
+    margin-left: 40%;
+    margin-top: 5px;
+    font-size: 29px;
+    font-weight: 600;
+    color: white;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body{
+    background-color: rgb(8, 104, 104);
+}
+.container {
+    text-align: center;
+    margin-top: 100px;
+}
+.twotwo
+{
+    font-size: 24px;
+    margin-left: 15px;
+    font-weight: bolder;
+}
+.dentamo
+{
+    margin-left: 70%;
+    font-size: 26px;
+
+}
+.conttt
+{
+    border-radius: 3px;
+    width: 600px;
+    height: 800px;
+    background-color: rgb(141, 174, 202);
+}
+.displayImage
+{
+    width: 600px;
+    height: 500px;
+    margin-left: 25%;
+}
+a{
+    color: aliceblue;
+    font-size: 22px;
+    font-weight: 500;
+    margin-left: 15px;
+}
+.container-fluid{
+    position: fixed;
+    margin-left: 60%;
+}
+img{
+    height: 400px;
+    width: 370px;
+}
+.displayLast
+{
+    color:white;
+    margin-left: 60%;
+    font-size: 30px;
+}
+    </style>
+    <title>www.wcu.edu.et</title>
+</head>
+<body>
+    <header>
+        <div class="container-fluid p-3 bg-black text-lg-right" id="menu" align="right">
+            <!-- <div class="spinner-grow-sm text-primary"><h3> jajura city</h3></div> -->
+        </div>
+    </header>
+    <div class="dent">.</div>
+     <div class="ersamoo">This is Announcement</div>
+    <div id="displayContainer">
+        <div class="other" id="entryContainer">
+            <!-- Entry content will be dynamically added here -->
+        </div>
+    </div>
+    <script>
+        
+        fetch('/home.json')
+            .then(response => response.json())
+            .then(data => {
+                const entryContainer = document.getElementById('entryContainer');
+
+                data.forEach((home, index) => {
+                    const entryDiv = document.createElement('div');
+                    entryDiv.classList.add('other');
+
+                    
+                    var currentDate = new Date();
+                    var hours = currentDate.getHours(); // 0-23
+                    var minutes = currentDate.getMinutes(); // 0-59
+                    var seconds = currentDate.getSeconds(); // 0-59
+                    var formattedHours = hours < 10 ? "0" + hours : hours;
+                    var formattedMinutes = minutes < 10 ? "0" + minutes : minutes;
+                    var formattedSeconds = seconds < 10 ? "0" + seconds : seconds;
+                    var currentTime = formattedHours + ":" + formattedMinutes + ":" + formattedSeconds;
+                    console.log("Current time is: " + currentTime);
+
+
+                    const displayNameElement = document.createElement('div');
+                    displayNameElement.classList.add('displayName');
+                    displayNameElement.textContent = 'Written by: ' + home.name;
+
+                    const displayDescriptionElement = document.createElement('div');
+                    displayDescriptionElement.classList.add('displayDescription');
+                    displayDescriptionElement.textContent = 'what is Announcement : '+ home.description;
+
+                    
+                    const displayLastElement = document.createElement('div');
+                    displayLastElement.classList.add('displayLast');
+                    displayLastElement.textContent = home.last + " on " + currentTime;
+
+
+                    const displayImageElement = document.createElement('img');
+                    displayImageElement.classList.add('displayImage');
+                    displayImageElement.src = '../' + home.imagePath;
+                    displayImageElement.alt = 'Displayed Image';
+    
+                    entryDiv.appendChild(displayNameElement);
+                    entryDiv.appendChild(displayDescriptionElement);
+                    entryDiv.appendChild(displayLastElement);
+                    entryDiv.appendChild(displayImageElement);
+                    
+
+                    entryContainer.appendChild(entryDiv);
+                });
+            })
+            .catch(error => {
+                console.error('Error fetching home data:', error);
+            });
+    </script>
+</body>
+</html>

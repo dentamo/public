@@ -1,0 +1,62 @@
+body{
+    background-color: rgb(8, 104, 104);
+}
+.dentamo
+{
+    margin-left: 70%;
+    font-size: 26px;
+}
+
+.ersasa
+{
+    height: 45px;
+    width: 500px;
+    border-radius: 5px;
+    margin-left: 20px;
+    margin-top: 30px;
+}
+.ersass
+{
+    height: 40px;
+    width: 200px;
+    border-radius: 5px;
+    margin-left: 200px;
+    margin-top: 10px; 
+    background-color: rgb(221, 236, 13); 
+}
+.ersass:hover
+{
+    color: #fcf3f3;
+    background-color: black;
+}
+.ersasa:hover
+{
+    background-color: rgb(155, 68, 28);
+    color: rgb(7, 8, 24);
+}
+
+.ersa{
+    margin-top: 40px;
+    color: #fcf3f3;
+    margin-left: 430px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 24px;
+}
+.ononon
+{
+    height: 420px;
+    width: 640px;
+    background-color: rgb(155, 68, 28);
+    margin-left: 350px;
+    border-radius: 20px;
+}
+.dede
+{
+    height: 400px;
+    width: 600px;
+    background-color: rgb(2, 66, 66);
+    margin-left: 20px;
+    border-radius: 20px;
+    padding-top: 5px;
+}
+

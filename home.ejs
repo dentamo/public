@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Home</title>
+</head>
+<body>
+  <h1>Home</h1>
+  <% data.forEach((item) => { %>
+    <div>
+      <img src="<%= item.imagePath %>" alt="Image">
+      <h2><%= item.name %> <%= item.last %></h2>
+      <p><%= item.description %></p>
+    </div>
+  <% }); %>
+</body>
+</html>

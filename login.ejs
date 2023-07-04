@@ -1,0 +1,16 @@
+<!-- login.ejs -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login Page</title>
+</head>
+<body>
+  <% if (user) { %>
+    <h1>Welcome, <%= user.name %>!</h1>
+    <img src="<%= user.image %>" alt="Profile Picture">
+  <% } else { %>
+    <h1>Login</h1>
+    <!-- Login form -->
+  <% } %>
+</body>
+</html>

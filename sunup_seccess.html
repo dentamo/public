@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sign Up Success</title>
+  <style>
+    .profile-image {
+      max-width: 200px;
+      max-height: 200px;
+    }
+    .cv-pdf {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Sign Up Successful!</h1>
+  <h2>Profile Image:</h2>
+  <img src="/uploads/<%= employee.image %>" class="profile-image" alt="Profile Image">
+
+  <div class="cv-pdf">
+    <h2>CV:</h2>
+    <a href="/uploads/<%= employee.cv %>" target="_blank">Download CV</a>
+  </div>
+
+  <div class="cv-pdf">
+    <h2>PDF:</h2>
+    <a href="/uploads/<%= employee.pdf %>" target="_blank">Download PDF</a>
+  </div>
+</body>
+</html>

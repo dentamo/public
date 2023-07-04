@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Employee Data</title>
+  <style>
+    h1{
+      color: white;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    th, td {
+      padding: 8px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+    h1{
+      align-self: center;
+      text-align: center;
+    }
+    body
+    {
+      background-color: rgb(104, 160, 209);
+    }
+    .new
+    {
+      align-self: center;
+      font-size: 24px;
+      text-align: center;
+      margin-top: 50px;
+      margin-left: 38%;
+      border-radius: 3px;
+      width: 300px;
+      background-color: rgb(208, 255, 0);
+    }
+    .new:hover
+    {
+      border-radius: 5px;  
+    }
+    .new:hover
+    {
+      color: #110808;
+      background-color: rgb(25, 11, 228);
+    }
+    a
+    {
+      height: 50px; 
+      width: 400px;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>ADD AND DELETE THE USER</h1>
+  <div class="new">
+  <form action="/Add" method="get">
+<a href="edit.html">Edit Employee data</a>
+  </form>
+</div>
+<div class="new">
+    <form action="/dil" method="get">
+      <a href="wow.html">EDIT</a>
+     </form>
+    </div>
+  <table id="employee-table">
+    </thead>
+    <tbody></tbody>
+  </table>
+</body>
+</html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="css/style2.css">
+    <title>employee</title>
+</head>
+<body>
+    <div class="container">
+        <div class="header12">
+                <button class="register">
+                    <a href="https://www.example.com/log_in.html">Login</a>
+                </button>
+        </div>
+        <div class="ener">
+            <div class="login-box">
+                <div class="form-container">
+                    <div class="momo">Registration Form</div>
+                    <div class="onee">
+                        <div class="oneee">
+                            <h3 class="header">Employee Form</h3>
+                            <div class="formm">
+                                <div class="above">
+                                    <form action="/employee" method="POST" enctype="multipart/form-data">
+                                        <div class="ersamode">
+                                        <div>
+                                        <label for="name" class="color">Full Name:</label>
+                                        <input type="text" id="name" name="name" placeholder="Full Name" pattern="[A-Za-z\s]+" required>
+                                        </div>
+                                        <div>                            
+                                        <label for="starting_date" class="color">Work Starting Date:</label>
+                                        <input type="text" id="starting_date" name="starting_date" class="datepicker" placeholder="WORK STARTING DATE" required>
+                                        </div>
+                                        <div> 
+                                        <label for="work_level" class="color">Work Level:</label>
+                                        <input type="text" id="work_level" name="work_level" placeholder="Work Level" required>
+                                    </div>
+                                    <div> 
+                                      <label for="work_department" class="color">Work Department:</label>
+                                      <input type="text" id="department" name="department" placeholder="Work Department" required>
+                                        </div>
+                                    </div>
+                                    <div class="ersamode">
+                                        <div>
+                                        <label for="pass" class="color">Password:</label>
+                                        <input type="password" id="Password" name="Password" placeholder="Lowercase,Uppercase Letter,Special character," pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*])[a-zA-Z!@#$%^&*]+$" required>
+                                    </div>
+                                    <div>
+                                        <label for="Age" class="color">Age:</label>
+                                        <input type="text" id="age" name="age" placeholder="age" min="20" required class="no-spinner" minlength="2" maxlength="2" >
+                                    </div>
+                                 
+                                    <div>
+                                        <label for="Age" class="color">sex:</label>
+        
+                                        <select class="optioo" id="sex" name="sex" required>
+                                            <option class="optioo" value="">Select Gender</option>
+                                            <option class="optioo" value="male">Male</option>
+                                            <option class="optioo" value="female">Female</option>
+                                        </select>
+                            </div>
+                                        <div>
+
+                                        <label for="Age" class="color">Salary:</label>
+                                        <input type="number" id="salary" name="salary" placeholder="salary" required class="no-spinner" >
+                                    </div>
+                                </div>
+                                <div class="ersamode">
+                                    <div>
+                                        <label for="P_no" class="color">Phone Number:</label>
+                                        <input type="number" id="P_no" name="P_no" placeholder="Phone Number" required class="no-spinner">
+                                    </div>
+                                
+                                    <div>
+                                        <label for="w_place" class="color">Working place:</label>
+                                        <input type="text" id="w_place" name="w_place" placeholder="Working place" required>
+                                      </div>
+                                    
+                                      <div>
+                                        <label for="E_level" class="color">Education Level:</label>
+                                        <select class="optioo" id="E_level" name="E_level" required>
+                                            <option class="optioo" value="">Education level</option>
+                                            <option class="optioo" value="male">DEGREE</option>
+                                            <option class="optioo" value="female">MASTERS</option>
+                                            <option class="optioo" value="female">PHD</option>
+                                            <option class="optioo" value="female">OTHER</option>
+                                        </select>
+                                    </div>
+                                    <div>
+                                        <label for="image" class="color">Employee Image:</label>
+                                        <input class="For_image" type="file" id="image" name="image" accept="image/*" required>
+                                    </div>
+                                </div>
+                                <div class="ersamode">
+                                    <div>
+                                        <label for="cv" class="color">CV:</label>
+                                        <input class="For_image" accept=".pdf,.doc,.docx" type="file" id="cv" name="cv" required>
+                                   </div>
+                                   <div>
+                                        <label for="pdf" class="color">PDF:</label>
+                                        <input class="For_image" accept=".pdf" type="file" id="pdf" name="pdf" required>
+                                      </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="vertical-line"></div>
+                            <div class="twoo">
+                                <h3 class="header">Surety (ዋስ) Form</h3>
+                                <div class="formm">
+                                    <div class="above">
+                                        <form action="/employee" method="POST" enctype="multipart/form-data">
+                                            <div class="ersamode">
+                                                <div>
+                                            <label for="name" class="color">Name:</label>
+                                            <input type="text" id="s_name" name="s_name" placeholder="Name" pattern="[A-Za-z\s]+" required>
+                                                </div>
+                                                <div>
+                                            <label for="starting_date" class="color">Salary per month:</label>
+                                            <input type="number" id="s_date" name="s_date" placeholder="Salary/month" required class="no-spinner">
+                                            </div>   
+                                            <div>
+                                            <label for="worklevel" class="color">Work Level:</label>
+                                            <input type="text" id="worklevel" name="worklevel" placeholder="Work Level" required>
+                                        </div>   
+                                        <div>
+                                            <label for="address" class="color">Address:</label>
+                                            <input type="text" id="s_address" name="s_address" placeholder="Address" required>
+                                        </div>
+                                     </div>
+                                     <div class="ersamode">
+                                        <div>
+                                            <label for="address" class="color">Education Level:</label>
+                                            <select class="optioo" id="s_E_level" name="s_E_level" required>
+                                                <option class="optioo" value="">Education level</option>
+                                                <option class="optioo" value="male">DEGREE</option>
+                                                <option class="optioo"  value="female">MASTERS</option>
+                                                <option class="optioo" value="female">PHD</option>
+                                                <option class="optioo" value="female">OTHER</option>
+                                            </select>
+                                        </div>   
+                                        <div>
+                                            <label for="image" class="color">Surety Image:</label>
+                                            <input class="For_image" type="file" id="s_image" name="s_image" required>
+                                        </div>   
+                                        <div>
+                                            <label for="cv" class="color">CV:</label>
+                                            <input class="For_image" accept=".pdf,.doc,.docx" type="file" id="s_cv" name="s_cv" required>
+                                        </div>   
+                                        <div>
+                                            <label for="pdf" class="color">PDF:</label>
+                                            <input class="For_image" accept=".pdf" type="file" id="s_pdf" name="s_pdf" required>
+                                          </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <input class="terz" type="submit" value="Register">
+                </form>
+
+            </div>
+        </div>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $(".datepicker").datepicker({
+                dateFormat: "dd/mm/yy"
+            });
+        });
+    </script>
+</body>
+</html>

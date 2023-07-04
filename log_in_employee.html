@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <title>www.wcu.edu.et</title>
+</head>
+<body>
+  <div class="contaner">
+    <div class="header12">
+     <div class="regiester">
+     </div>
+    </div>
+    <div class="ener">
+      <div class="login-box">
+        <h1>Login Here</h1>
+        <form action="/login_emp" method="POST">
+          <label for="text">User name:</label>
+          <input type="text" id="name" name="name" placeholder="Enter your username"required>
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password"  placeholder="Enter your password" required><br><br>
+          <input type="submit" onclick="storeName()" value="Login">
+        </form>
+      </div>
+      
+    </div>
+    <div class="wache">
+      "WE DO WHAT WE WENT BECAUSE WE CAN!"
+    </div>
+
+  </div>
+  <script>
+    function storeName() {
+        var name = document.getElementById("name").value;
+        localStorage.setItem("name", name);
+        window.location.href = "../login_employee.html";
+    }
+</script>
+</body>
+</html>

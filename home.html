@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Name Display</title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="css/home2.css">
+</head>
+<body>
+    <h1 class="ersa">What You Went To Announcement </h1>
+    <div class="container">
+        <form action="/homee" method="POST" enctype="multipart/form-data">
+            <div class="ononon">
+                <div class="dede">
+            <input class="ersasa" type="text" name="name" placeholder="manger Name" required>
+            <input class="ersasa" type="text" id="starting_date" name="last" class="datepicker" placeholder="date" required>
+            <textarea class="ersasa" name="description" placeholder="Description" required></textarea>
+            <input class="ersasa" type="file" name="image" accept="image/*" required>
+            <button class="ersass" type="submit">Save</button>
+           </div>
+        </div>
+          </form>          
+    <script src="js/home2.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $(".datepicker").datepicker({
+                dateFormat: "dd/mm/yy"
+            });
+        });
+    </script>
+</body>
+</html>

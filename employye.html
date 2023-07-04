@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Employee Data</title>
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    th, td {
+      padding: 8px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+    h1{
+      align-self: center;
+      text-align: center;
+    }
+    body
+    {
+      background-color: rgb(104, 160, 209);
+    }
+    .new
+    {
+      align-self: center;
+      font-size: 24px;
+      text-align: center;
+      margin-top: 50px;
+      background-color: rgb(208, 255, 0);
+      width: 120px;
+      height: 90;
+      border-radius: 3px;
+      margin-left: 45%;
+    }
+    .new:hover
+    {
+      border-radius: 5px;
+      background-color: #55f10d;
+    }
+    .ono
+    {
+      background-color: aqua;
+      border-color: aqua;
+      border-radius: 1px;
+    }
+    .ono:hover
+    {
+      color: #fff;
+      background-color: black;
+    }
+  </style>
+</head>
+<body>
+  <h1>see Data</h1>
+  <div class="new">
+  <form action="/fetch-employes" method="get">
+    <label for="name" class="color">Employee work level:</label>
+ <input class="ono" type="submit" value="SEE">
+  </form>
+</div>
+<div class="new">
+  <form action="/fetch-employss" method="get">
+    <label for="name" class="color">Employee Salary:</label>
+ <input class="ono" type="submit" value="SEE">
+  </form>
+</div>
+  <table id="employee-table">
+    </thead>
+    <tbody></tbody>
+  </table>
+</body>
+</html>
